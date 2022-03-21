@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lô tô"
+        android:textColor="#f20"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/editTextNumberCount"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        app:layout_constraintBottom_toTopOf="@id/buttonRao"
+        android:hint="Ví dụ : Nhập số lượng là 100"
+        android:id="@+id/editTextNumberCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Rao"
+        android:id="@+id/buttonRao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumberCount"
+        app:layout_constraintEnd_toStartOf="@id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:text="Chơi lại"
+        android:id="@+id/buttonReset"
+        app:layout_constraintStart_toEndOf="@id/buttonRao"
+        app:layout_constraintBottom_toBottomOf="@id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumberCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine1"
+        app:layout_constraintGuide_percent="0.35"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideLine1"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#090909"
+            android:textSize="18sp"
+            android:text="Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn.Kết luận: Vấn đề như vậy không phải là chỉ liên quan đến việc vận chuyển, mà còn là phân luồng và điều chỉnh các kênh xuyên suốt quá trình gia tăng giá trị và xoá bỏ những giá trị không gia tăng. Hậu cần trong quá trình sản xuất được áp dụng cho cả những nhà máy đang tồn tại hoặc mới được thành lập. Sản xuất chế tạo là một nhà máy với quá trình thay đổi ổn định (có thể hiểu là một nhà máy thì luôn phải hoạt động nhưng với một công suất ổn định). Máy móc được thay đổi và thay mới. Theo đó sẽ là cơ hội cải thiện hệ thống hậu cần trong sản xuất. Ngược lại, hậu cần sẽ cung cấp các phương tiện cho việc đạt được hiệu quả mong muốn của khách hàng và hiệu quả sử dụng vốn."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
