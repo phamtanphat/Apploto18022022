@@ -28,17 +28,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void event() {
-
-        // Thêm số
+        // thêm số
         mBtnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 // check number
                 String textNumber = mEdtInput.getText().toString();
 
                 if (textNumber.isEmpty()){
-                    Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Number is empty", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -57,13 +55,33 @@ public class MainActivity extends AppCompatActivity {
                     mArrNumbers.add(i);
                 }
 
-
                 // ẩn button add và edittext , enable button rao và reset
                 isEnableView(false,mBtnAdd);
                 isEnableView(false,mEdtInput);
 
                 isEnableView(true,mBtnRao);
                 isEnableView(true,mBtnReset);
+            }
+        });
+
+        // Chơi lại
+        mBtnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // - xóa dữ liệu trong mảng
+                if (mArrNumbers != null && mArrNumbers.size() > 0){
+                    mArrNumbers.clear();
+                }
+                // - xóa giao diện trong edittext
+                mEdtInput.setText("");
+                // - disable button rao , button reset
+                isEnableView(false,mBtnRao);
+                isEnableView(false,mBtnReset);
+                // - enable button thêm số , edittext
+                isEnableView(true,mBtnAdd);
+                isEnableView(true,mEdtInput);
+
+
             }
         });
     }
