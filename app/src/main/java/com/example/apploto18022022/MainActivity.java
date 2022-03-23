@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnRao, mBtnReset, mBtnAdd;
     TextView mTvResult;
     ArrayList<Integer> mArrNumbers;
+    Random mRandom;
+    String mResult = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,7 +84,33 @@ public class MainActivity extends AppCompatActivity {
                 isEnableView(true,mBtnAdd);
                 isEnableView(true,mEdtInput);
 
+                // clear result
+                mResult = "";
+                mTvResult.setText(mResult);
+            }
+        });
 
+        mBtnRao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (mArrNumbers.size() > 0){
+                    // random trả về 1 vị trí ngẫu nhiên
+                    int index = mRandom.nextInt(mArrNumbers.size());
+                    int value = mArrNumbers.get(index);
+                    // lấy giá trị ở vị trí đó và hiển thị lên ui
+                    if(mArrNumbers.size() == 1){
+                        mResult += value;
+                    }else{
+                        mResult += value + " - ";
+                    }
+
+                    mTvResult.setText(mResult);
+                    // xóa giá trị ở vị trí đó
+                    mArrNumbers.remove(index);
+                }else{
+                    Toast.makeText(MainActivity.this, "Finish", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -99,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
 
         //declare array
         mArrNumbers = new ArrayList<>();
+
+        //declare random
+        mRandom = new Random();
     }
 
     private void isEnableView(boolean isEnable, View view) {
