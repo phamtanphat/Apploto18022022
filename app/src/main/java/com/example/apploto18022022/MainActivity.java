@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     EditText mEdtInput;
     Button mBtnRao, mBtnReset, mBtnAdd;
     TextView mTvResult;
-
+    ArrayList<Integer> mArrNumbers;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,24 +29,43 @@ public class MainActivity extends AppCompatActivity {
 
     private void event() {
 
-        // Arraylist
+        // Thêm số
+        mBtnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        // Create
-        ArrayList<String> arrNames = new ArrayList<>();
+                // check number
+                String textNumber = mEdtInput.getText().toString();
 
-        // Thêm
-        arrNames.add("Tèo"); // 0
-        arrNames.add("Tý"); // 1
-        arrNames.add("Tủn");  // 2
+                if (textNumber.isEmpty()){
+                    Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-        // Cập nhật
-        arrNames.set(2, "Tuấn");
+                int number = Integer.parseInt(textNumber);
 
-        // Xóa
-        arrNames.remove(0);
+                if (number < 10){
+                    Toast.makeText(MainActivity.this, "Not less than 10 ", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-        // Lấy dữ liệu
-        Log.d("BBB",arrNames.get(0));
+                // Add value into array
+                if (mArrNumbers.size() > 0){
+                    mArrNumbers.clear();
+                }
+                for (int i = 1 ;  i <= number ; i++){
+                    mArrNumbers.add(i);
+                }
+
+
+                // ẩn button add và edittext , enable button rao và reset
+                isEnableView(false,mBtnAdd);
+                isEnableView(false,mEdtInput);
+
+                isEnableView(true,mBtnRao);
+                isEnableView(true,mBtnReset);
+            }
+        });
     }
 
     private void initView() {
@@ -58,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
         // disable View
         isEnableView(false, mBtnRao);
         isEnableView(false, mBtnReset);
+
+        //declare array
+        mArrNumbers = new ArrayList<>();
     }
 
     private void isEnableView(boolean isEnable, View view) {
